@@ -2,10 +2,13 @@ var alarm;
 $(document).ready(function(){
   $("#image").hide();
  function update(){
-  $("#time1").text(moment().format("H:mm:ss"));
-  var currentTime=moment().format("H:mm");
+  $("#time1").html(moment().format("H:mm:ss"));
+  var currentTime=moment().format("HH:mm");
+  console.log(currentTime);
+  console.log(alarm);
   if(alarm===currentTime){
     $("#image").show();
+    console.log("SAME!");
     }
     else{
       $("#image").hide();
